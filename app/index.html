@@ -3,23 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker (PS5, all 55 trophies)</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="hero">
+  <div class="hero-main">
+    <p class="kicker">GRAND THEFT AUTO VI · PLAYSTATION 5 · OFFLINE GUIDE &amp; TRACKER</p>
+    <h1>Leonida Legend</h1>
+    <p class="sub">Every one of the 55 PS5 trophies with its official name, description and grade, a guide in our own words with its sources, a 9-stage roadmap to the platinum, and the one missable trophy flagged before it can hurt you.</p>
+    <div class="hero-stats">
+      <span><strong>55</strong> trophies</span>
+      <span><strong>1</strong> platinum</span>
+      <span><strong>2</strong> gold</span>
+      <span><strong>6</strong> silver</span>
+      <span><strong>46</strong> bronze</span>
+      <span><strong>28</strong> hidden</span>
+      <span><strong>0</strong> online</span>
+      <span><strong>~200 h</strong> to platinum</span>
+    </div>
+  </div>
+  <div class="hero-progress">
+    <div class="ring" id="ring"><span id="ring-pct">0%</span></div>
+    <p id="progress-text">0 of 55 earned</p>
+    <p id="grade-text">0 platinum · 0 gold · 0 silver · 0 bronze</p>
+    <p class="next-up" id="next-up"></p>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<section class="alert" id="missable-alert">
+  <strong>⚠ One missable trophy:</strong> <b>Positive Mental Attitude</b> — Lucia's balcony meditation at Jason's house in <b>Chapter 1</b> disappears when the chapter ends, and there is no mission replay. Do it before you finish Chapter 1, keep a manual save at the start of every chapter, and never use cheats on your trophy save (they switch trophies and saving off).
+</section>
+
+<nav class="toolbar" aria-label="Tracker controls">
+  <input id="search" type="search" placeholder="Search trophies, missions, places…" aria-label="Search trophies">
+  <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind"></div>
+  <label>Grade
+    <select id="grade-filter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="toggle"><input type="checkbox" id="spoiler-toggle"> Spoiler protection (hide story trophies until earned)</label>
+  <label class="toggle"><input type="checkbox" id="hide-earned"> Hide earned</label>
+  <button id="export-btn" type="button">Export progress</button>
+  <label class="import-btn">Import progress <input id="import-input" type="file" accept="application/json"></label>
+  <button id="reset-btn" type="button">Reset</button>
+</nav>
+
+<main class="layout">
+  <section class="list-pane">
+    <h2 id="list-heading">All 55 trophies</h2>
+    <div id="trophy-list"></div>
+    <p id="empty-note" class="empty" hidden></p>
+  </section>
+  <aside class="detail-pane" id="detail-pane" aria-live="polite"></aside>
+</main>
+
+<section class="roadmap" id="roadmap">
+  <h2>Roadmap to the platinum — 9 stages, in order</h2>
+  <p class="roadmap-intro">One playthrough is enough: there are no difficulty trophies, no online trophies and no mission medals. The order below is built from the official descriptions — which chapters unlock what, which counts the 100% checklist raises above the trophy counts, and where the single missable hides.</p>
+  <div id="roadmap-stages"></div>
+</section>
+
+<footer>
+  <h2>Sources</h2>
+  <p>Official trophy names, descriptions and grades are as PlayStation publishes them, cross-checked between Exophase and PSNProfiles (the list the make.fun kit starter carries). Guides are written for this entry in its own words; each trophy names its sources, and the main ones are:</p>
+  <ul id="source-list"></ul>
+  <p class="fine">Unofficial fan guide. Not affiliated with Rockstar Games or Take-Two Interactive; no Rockstar logo, artwork or game screenshots are used — the look is this app's own. Progress is stored only in your browser (localStorage) and never leaves your machine; export and import move it as a small JSON file.</p>
+</footer>
+
 <script type="module" src="app.js"></script>
 </body>
 </html>

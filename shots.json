@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-cover.jpg","path":"/","view":"Dashboard with 9 of 55 trophies earned (16% ring), the missable warning banner, kind filter chips and the trophy list with the platinum guide open","viewport":{"height":800,"width":1280}},{"file":"2-missable-guide.jpg","path":"/","view":"Detail panel for Positive Mental Attitude, the one missable trophy: full own-words guide, when it can be missed, and its cited sources","viewport":{"height":800,"width":1280}},{"file":"3-roadmap.jpg","path":"/","scroll":"roadmap","view":"The 9-stage roadmap to the platinum with per-stage progress and trophy chips","viewport":{"height":800,"width":1280}},{"file":"4-spoiler-mode.jpg","path":"/","view":"Spoiler protection on: unearned story trophies show as Hidden story trophy while earned ones stay visible","viewport":{"height":800,"width":1280}}]
